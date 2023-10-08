@@ -60,21 +60,58 @@ i{
     left: 90%;
     top: 12px;
 }
-#hide{
+#togglePassword{
+    font-size: 1.2rem;
     cursor: pointer;
+    top: 5px;
 }
+
 .input-box input::placeholder{
     color: #fff;
 }
 .check-box{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 1rem;
     padding: 0 5px;
 }
+.check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type = "checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.15);
+    margin-right: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+input[type = "checkbox"]:after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    content: "\f00c";
+    display: none;
+
+}
+input[type = "checkbox"]:checked:after{
+    display: block;
+}
+
 
 .check-box a{
     text-decoration: none;
@@ -134,6 +171,10 @@ button{
     }
     button{
         font-size: 14px;
+    }
+    input[type = "checkbox"]{
+        height: 14px;
+        width: 14px;
     }
 }
 @media (max-width: 360px) {
